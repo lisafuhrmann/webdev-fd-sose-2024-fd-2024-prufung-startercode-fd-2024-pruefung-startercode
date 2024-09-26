@@ -21,3 +21,7 @@ npm run dev
 ```
 
 😎
+
+### Anmerkung: Die Idee für den Slider habe ich von hier übernommen und teile mit Copilot angepasst:
+
+https://www.youtube.com/watch?v=9HcxHDS2w1s
