@@ -62,6 +62,29 @@
     }
   }
 
+  &.with-bg-stone {
+    padding-top: var(--size-xl);
+    padding-bottom: var(--size-xxl);
+    margin-top: var(--size-xl);
+    background-color: var(--color-dark);
+    color: var(--color-lightest);
+  
+    h2 {
+      color: var(--your-custom-color);
+    }
+    
+    @media only screen and (width <= 40rem) {
+      padding: var(--size-xl) var(--size-m);
+      margin: calc(var(--size-m) * -1);
+    }
+  
+    @media only screen and (width > 40rem) {
+      padding-left: var(--size-xl);
+      margin-left: calc(var(--size-xl) * -1);
+    }
+  }
+  
+
   &.with-bg-dark{
     background-color: var(--color-dark);
     * { color: var(--color-lightest) }
