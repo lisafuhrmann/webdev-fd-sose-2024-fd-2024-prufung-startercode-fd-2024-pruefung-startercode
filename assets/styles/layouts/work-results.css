@@ -3,3 +3,12 @@
 .work-results {
 margin: 0 auto;
 }
+
+.work-results .section,
+.work-results div {
+  margin-bottom: var(--size-xl)
+}
+
+section h3 {
+  color: var(--color-blue);
+}
