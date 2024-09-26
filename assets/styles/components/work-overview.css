@@ -1,2 +1,49 @@
 /* Work Overview
 ############################################################################ */
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+}
+
+.work-item {
+  background-color: var(--color-lighten);
+  padding: 1em;
+  color: var(--decoration-color);
+  border-bottom: 2px solid var(--decoration-color);
+}
+
+.work-content {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.work-image {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+}
+
+.work-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-item h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.work-item p {
+  margin: 0.5em 0;
+}
+
+.work-item a {
+  color: var(--interaction-color);
+  text-decoration: none;
+  font-weight: bold;
+}
