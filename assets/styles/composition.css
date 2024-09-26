@@ -38,9 +38,9 @@
 ############################################################################ */
 .section {
   &.has-seperator {
-    padding-top: var(--size-l);
-    border-top: dotted var(--border-width) var(--border-color);
-    margin-top: var(--size-xl);
+    padding-top: var(--size-m);
+    border-top: none;
+    margin-top: var(--size-xs);
   }
 
   &.with-bg-gray,
