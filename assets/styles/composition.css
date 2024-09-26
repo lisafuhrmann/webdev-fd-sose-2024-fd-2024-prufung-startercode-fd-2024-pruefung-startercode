@@ -105,7 +105,6 @@ section + section{
 .image-container {
   display: flex;
   justify-content: left;
-  margin-left: var(--size-xl);
 }
 
 .half-screen-image {

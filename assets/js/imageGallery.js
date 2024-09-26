@@ -14,15 +14,35 @@ async function loadImageGallery() {
       imgElement.alt = image.metadata.Description || "Bild";
       imgElement.classList.add("gallery-image");
 
-      imgElement.onerror = function () {
-        console.error(`Bild konnte nicht geladen werden: ${imgElement.src}`);
-      };
+      imgElement.addEventListener("click", function () {
+        openModal(imgElement.src, imgElement.alt);
+      });
 
       galleryContainer.appendChild(imgElement);
     });
   } catch (error) {
     console.error("Fehler beim Laden der Bildstrecke:", error);
   }
+}
+// Auch hier hat ChatGPT nachgeholfen
+function openModal(imageSrc, imageAlt) {
+  const modal = document.getElementById("image-modal");
+  const modalImage = document.getElementById("modal-image");
+  const captionText = document.getElementById("caption");
+
+  modal.style.display = "block";
+  modalImage.src = imageSrc;
+  captionText.innerHTML = imageAlt;
+  const closeButton = document.querySelector(".close");
+  closeButton.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
 document.addEventListener("DOMContentLoaded", loadImageGallery);
